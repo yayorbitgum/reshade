@@ -468,9 +468,12 @@ void reshade::runtime::on_present()
 	if (!ini_file::flush_cache())
 		_preset_save_success = false;
 
-//#if RESHADE_ADDON
+#if RESHADE_ADDON
+// 7MD: Commented this out to remove flickering in WoW and FFXIV.
 //	// Detect high network traffic
-//	static int cooldown = 0, traffic = 0;
+//	static int cooldown = 0;
+//	static int traffic = 0;
+//
 //	if (cooldown-- > 0)
 //	{
 //		traffic += g_network_traffic > 0;
@@ -481,11 +484,11 @@ void reshade::runtime::on_present()
 //		traffic = 0;
 //		cooldown = 60;
 //	}
-//#endif
-//
-//	// Reset frame statistics
-//	g_network_traffic = 0;
-//}
+#endif
+
+	// Reset frame statistics
+	g_network_traffic = 0;
+}
 
 bool reshade::runtime::load_effect(const std::filesystem::path &source_file, const ini_file &preset, size_t effect_index, bool preprocess_required)
 {
