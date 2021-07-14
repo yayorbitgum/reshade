@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/gl3w" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/imgui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/minhook" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/openvr" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/spirv" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/stb" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/utfcpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/utfcpp/extern/gtest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/vma" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/deps/vulkan" vcs="Git" />
+  </component>
+</project>
