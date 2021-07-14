@@ -468,24 +468,24 @@ void reshade::runtime::on_present()
 	if (!ini_file::flush_cache())
 		_preset_save_success = false;
 
-#if RESHADE_ADDON
-	// Detect high network traffic
-	static int cooldown = 0, traffic = 0;
-	if (cooldown-- > 0)
-	{
-		traffic += g_network_traffic > 0;
-	}
-	else
-	{
-		addon::enable_or_disable_addons(traffic < 10);
-		traffic = 0;
-		cooldown = 60;
-	}
-#endif
-
-	// Reset frame statistics
-	g_network_traffic = 0;
-}
+//#if RESHADE_ADDON
+//	// Detect high network traffic
+//	static int cooldown = 0, traffic = 0;
+//	if (cooldown-- > 0)
+//	{
+//		traffic += g_network_traffic > 0;
+//	}
+//	else
+//	{
+//		addon::enable_or_disable_addons(traffic < 10);
+//		traffic = 0;
+//		cooldown = 60;
+//	}
+//#endif
+//
+//	// Reset frame statistics
+//	g_network_traffic = 0;
+//}
 
 bool reshade::runtime::load_effect(const std::filesystem::path &source_file, const ini_file &preset, size_t effect_index, bool preprocess_required)
 {
